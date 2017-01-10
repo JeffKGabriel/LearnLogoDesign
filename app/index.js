@@ -1,19 +1,29 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { createStore, combineReducers, applyMiddleware} from 'redux'
+import thunk from 'redux-thunk';
+import { Provider, connect } from 'react-redux'
+import { Router, Route, hashHistory, IndexRoute, browserHistory } from 'react-router'
+import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 
-var Hello = (props) => {
-	let name = "bob";
-	return(
-		<div> 
-			Hi {name} 
-			<Place country="Stralia" />
-		</div>
-	)	
-}
+import routes from 'config/routes'
 
-var Place = (props) => {
-	return <div>{props.country}</div> 
-}
+import counter from './reducers/count.js'
 
 
-ReactDOM.render(<Hello />, document.getElementById('app')); 
+
+// Store
+const store = createStore(
+  combineReducers({
+    //reducer,
+    counter,
+    routing: routerReducer
+  }),
+  applyMiddleware(thunk)
+)
+
+ReactDOM.render(
+  <Provider store={store}>
+    {routes}
+  </Provider>,
+  document.getElementById('app'))
