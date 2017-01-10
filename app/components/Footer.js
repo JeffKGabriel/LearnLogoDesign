@@ -9,7 +9,7 @@ const Footer = React.createClass({
   render: function(){
 
     return(
-      <div>
+      <div className="col-sm-12 footer">
         Footer
       </div>
     )

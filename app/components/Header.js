@@ -5,7 +5,7 @@ var React = require('react');
 var Header = (props) =>{
 
   return(
-    <div>
+    <div className="col-sm-12 header">
       Header
     </div>
   )

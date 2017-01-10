@@ -1,3 +1,11 @@
+html{
+  position: relative;
+  min-height: 100%;
+}
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+}
+
 .box{
   box-shadow: 0 16px 16px rgba(0,0,0,.16);
   transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
@@ -6,4 +14,16 @@
 .box:hover{
   box-shadow: 0 20px 20px rgba(0,0,0,.24);
   transform: translateY(-3px);
+}
+
+.header{
+  height:100;
+  background-color: #DDD;
+}
+
+.footer{
+  height:100;
+  background-color: #CCC;
+  position: absolute;
+  bottom: 0;
 }
