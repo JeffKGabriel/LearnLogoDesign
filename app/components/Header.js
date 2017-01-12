@@ -1,12 +1,19 @@
 var React = require('react');
-//var ReactRouter = require('react-router');
-//var Link = ReactRouter.Link;
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
 
 var Header = (props) =>{
 
   return(
     <div className="col-sm-12 header">
-      Header
+
+    <Link to='/home'>
+      <button className="btn btn-default">Home</button>
+    </Link>
+
+      <Link to='/waffles'>
+        <button className="btn btn-default">Waffles</button>
+      </Link>
     </div>
   )
 }

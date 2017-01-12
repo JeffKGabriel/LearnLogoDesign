@@ -1,4 +1,4 @@
-  var React = require('react');
+var React = require('react');
 import { connect } from 'react-redux'
 //var ReactRouter = require('react-router');
 import { bindActionCreators } from 'redux'
@@ -10,10 +10,10 @@ const increaseAction = { type: 'increase', amount: 1 }
 const decreaseAction = { type: 'decrease', amount: 1 }
 
 
-const Home = React.createClass({
-  
-  mixins: [ myHistory],
+const Waffles = React.createClass({
 
+  mixins: [ myHistory],
+  
   render: function(){
     const { value, onIncreaseClick, onDecreaseClick } = this.props
     return(
@@ -23,7 +23,7 @@ const Home = React.createClass({
           paddingTop:100,
         }}>
         <div className="jumbotron text-center">
-          <h3>Home</h3>
+          <h3>Waffles</h3>
           <h1>{value}</h1>
           <button
             className="btn btn-default"
@@ -62,4 +62,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home)
+)(Waffles)
