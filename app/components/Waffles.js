@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 //var Link = ReactRouter.Link;
 
-import myHistory from './myHistory.js'
 
 const increaseAction = { type: 'increase', amount: 1 }
 const decreaseAction = { type: 'decrease', amount: 1 }
@@ -12,7 +11,6 @@ const decreaseAction = { type: 'decrease', amount: 1 }
 
 const Waffles = React.createClass({
 
-  mixins: [ myHistory],
   
   render: function(){
     const { value, onIncreaseClick, onDecreaseClick } = this.props

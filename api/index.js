@@ -17,6 +17,7 @@ mongoose.Promise = global.Promise;
 var config = require('./config');
 
 // *** mongoose *** ///
+/*
 mongoose.connect(config.mongoURI[api.settings.env], function(err, res) {
   if(err) {
     console.log('Error connecting to the database. ' + err);
@@ -24,6 +25,7 @@ mongoose.connect(config.mongoURI[api.settings.env], function(err, res) {
     console.log('Connected to Database: ' + config.mongoURI[api.settings.env]);
   }
 });
+*/
 
 
 

@@ -9,18 +9,20 @@ require('../styles/index.css');
 const Main = (props) =>{
 
     return(
-      <div>
-        <Header activeTab={props.location.pathname} />
-          <ReactCSSTransitionGroup
-            transitionName = "myAppear"
-            transitionAppear={true}
-            transitionAppearTimeout={500}
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={500}
-          >
-            {React.cloneElement(props.children, {key:props.location.pathname})}
-          </ReactCSSTransitionGroup>
-          <Footer />
+      <div id="OutsideWrapper">
+        <div id="InsideWrapper">
+          <Header activeTab={props.location.pathname} />
+            <ReactCSSTransitionGroup
+              transitionName = "myAppear"
+              transitionAppear={true}
+              transitionAppearTimeout={500}
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={500}
+            >
+              {React.cloneElement(props.children, {key:props.location.pathname})}
+            </ReactCSSTransitionGroup>
+            <Footer />
+        </div>
       </div>
     )
 }

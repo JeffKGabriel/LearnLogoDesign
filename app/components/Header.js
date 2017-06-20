@@ -5,15 +5,29 @@ var Link = ReactRouter.Link;
 var Header = (props) =>{
 
   return(
-    <div className="col-sm-12 header">
+    <div className="col-sm-12 header"
+      style={{
+        display:'flex',
+        flexDirection:'row',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+      }}
+      >
 
-    <Link to='/home'>
-      <button className="btn btn-default">Home</button>
-    </Link>
+      <div style={{
+        marginRight: '150px',
+      }}>
 
-      <Link to='/waffles'>
-        <button className="btn btn-default">Waffles</button>
-      </Link>
+        <Link to='/home'>
+          <button className="btn btn-default">Home</button>
+        </Link>
+
+        <Link to='/waffles'>
+          <button className="btn btn-default">Waffles</button>
+        </Link>
+
+      </div>
+
     </div>
   )
 }

@@ -4,26 +4,21 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 //var Link = ReactRouter.Link;
 
-import myHistory from './myHistory.js'
 
 const increaseAction = { type: 'increase', amount: 1 }
 const decreaseAction = { type: 'decrease', amount: 1 }
 
 
 const Home = React.createClass({
-  
-  mixins: [ myHistory],
 
   render: function(){
     const { value, onIncreaseClick, onDecreaseClick } = this.props
     return(
       <div
         style={{
-          height:2000,
-          paddingTop:100,
         }}>
         <div className="jumbotron text-center">
-          <h3>Home</h3>
+          <h3>Home:]</h3>
           <h1>{value}</h1>
           <button
             className="btn btn-default"
