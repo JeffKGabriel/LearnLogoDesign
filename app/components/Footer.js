@@ -6,7 +6,7 @@ const Footer = React.createClass({
 
     return(
       <div className="col-xs-12 footer">
-        Footer
+        
       </div>
     )
 
