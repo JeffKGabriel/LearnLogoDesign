@@ -14,11 +14,11 @@ const Home = React.createClass({
   render: function(){
     const { value, onIncreaseClick, onDecreaseClick } = this.props
     return(
-      <div
+      <div className="contentPage"
         style={{
         }}>
         <div className="jumbotron text-center">
-          <h3>Home:]</h3>
+          <h3>Home</h3>
           <h1>{value}</h1>
           <button
             className="btn btn-default"

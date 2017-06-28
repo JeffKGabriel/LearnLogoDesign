@@ -3,7 +3,10 @@ var React = require('react');
 import Header from './Header.js'
 import Footer from './Footer.js'
 
-var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+//import CSSTransitionGroup from 'react-transition-group'
+var CSSTransitionGroup = require('react-transition-group/CSSTransitionGroup') // ES5 with npm
+
+
 require('../styles/index.css');
 
 const Main = (props) =>{
@@ -12,15 +15,14 @@ const Main = (props) =>{
       <div id="OutsideWrapper">
         <div id="InsideWrapper">
           <Header activeTab={props.location.pathname} />
-            <ReactCSSTransitionGroup
-              transitionName = "myAppear"
-              transitionAppear={true}
-              transitionAppearTimeout={500}
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={500}
-            >
-              {React.cloneElement(props.children, {key:props.location.pathname})}
-            </ReactCSSTransitionGroup>
+
+
+
+
+            {React.cloneElement(props.children, {key:props.location.pathname})}
+
+
+
             <Footer />
         </div>
       </div>

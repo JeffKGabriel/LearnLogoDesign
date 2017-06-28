@@ -11,14 +11,12 @@ const decreaseAction = { type: 'decrease', amount: 1 }
 
 const Waffles = React.createClass({
 
-  
+
   render: function(){
     const { value, onIncreaseClick, onDecreaseClick } = this.props
     return(
-      <div
+      <div className="contentPage"
         style={{
-          height:2000,
-          paddingTop:100,
         }}>
         <div className="jumbotron text-center">
           <h3>Waffles</h3>
