@@ -17,6 +17,7 @@ const Home = React.createClass({
       <div className="contentPage"
         style={{
         }}>
+        
         <div className="jumbotron text-center">
           <h3>Home</h3>
           <h1>{value}</h1>

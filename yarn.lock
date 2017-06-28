@@ -1911,8 +1911,13 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.4:
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
 graphql@^0.10.1:
+<<<<<<< HEAD
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.10.3.tgz#c313afd5518e673351bee18fb63e2a0e487407ab"
+=======
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.10.1.tgz#75c93c2ce73aeb5bae2eefb555a8e9e39c36027d"
+>>>>>>> a6d395fdac0ef013424e4a1aece0e10f3ee03abc
   dependencies:
     iterall "^1.1.0"
 
@@ -1974,8 +1979,13 @@ history@^3.0.0:
     warning "^3.0.0"
 
 history@^4.5.1:
+<<<<<<< HEAD
   version "4.6.3"
   resolved "https://registry.yarnpkg.com/history/-/history-4.6.3.tgz#6d723a8712c581d6bef37e8c26f4aedc6eb86967"
+=======
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/history/-/history-4.6.2.tgz#716e863e1da0e97a028eed6da644061dd1e1ed1d"
+>>>>>>> a6d395fdac0ef013424e4a1aece0e10f3ee03abc
   dependencies:
     invariant "^2.2.1"
     loose-envify "^1.2.0"
@@ -3257,7 +3267,17 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+<<<<<<< HEAD
 react-dom@^15.6.1:
+=======
+react-addons-css-transition-group@^15.4.1:
+  version "15.6.0"
+  resolved "https://registry.yarnpkg.com/react-addons-css-transition-group/-/react-addons-css-transition-group-15.6.0.tgz#69887cf6e4874d25cd66e22a699e29f0d648aba0"
+  dependencies:
+    react-transition-group "^1.2.0"
+
+react-dom@^15.4.1:
+>>>>>>> a6d395fdac0ef013424e4a1aece0e10f3ee03abc
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
   dependencies:
@@ -3304,7 +3324,11 @@ react-transition-group@^1.2.0:
     prop-types "^15.5.6"
     warning "^3.0.0"
 
+<<<<<<< HEAD
 react@^15.6.1:
+=======
+react@^15.4.2:
+>>>>>>> a6d395fdac0ef013424e4a1aece0e10f3ee03abc
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
   dependencies:

@@ -3,6 +3,7 @@
 **Setup**
 
 ```shell
-npm install
-npm start 
+npm i -g yarn pm2
+yarn/npm install
+npm start
 ```
