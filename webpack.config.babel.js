@@ -28,8 +28,8 @@ module.exports = {
     ]
   },
   resolve: {
-    //extensions: ['', '.js', '.jsx'],
-    root: path.resolve('./app')
+    // extensions: ['', '.js', '.jsx'],
+    // root: path.resolve('./app')
   },
   plugins: [HTMLWebpackPluginConfig]
 };

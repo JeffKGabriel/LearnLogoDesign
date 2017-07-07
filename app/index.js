@@ -4,9 +4,9 @@ import { createStore, combineReducers, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk';
 import { Provider, connect } from 'react-redux'
 import { Router, Route, hashHistory, IndexRoute, browserHistory } from 'react-router'
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
+import { syncHistoryWithStore, routerReducer, routerMiddleware } from 'react-router-redux'
 
-import routes from 'config/routes'
+import routes from './config/routes.js'
 
 import counter from './reducers/count.js'
 
