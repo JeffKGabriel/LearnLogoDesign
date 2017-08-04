@@ -1,4 +1,4 @@
-var React = require('react');
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 //var ReactRouter = require('react-router');
 import { bindActionCreators } from 'redux'
@@ -8,11 +8,13 @@ import { bindActionCreators } from 'redux'
 const increaseAction = { type: 'increase', amount: 1 }
 const decreaseAction = { type: 'decrease', amount: 1 }
 
+class Waffles extends Component{
 
-const Waffles = React.createClass({
+  constructor (props) {
+    super(props)
+  }
 
-
-  render: function(){
+  render(){
     const { value, onIncreaseClick, onDecreaseClick } = this.props
     return(
       <div className="contentPage"
@@ -36,8 +38,8 @@ const Waffles = React.createClass({
         </div>
       </div>
     )
-  },
-});
+  }
+}
 
 // Map Redux state to component props
 function mapStateToProps(state) {

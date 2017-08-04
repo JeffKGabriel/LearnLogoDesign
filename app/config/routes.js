@@ -16,7 +16,6 @@ const routes = (
   <Router history={appHistory}>
     <Route path='/' component={Main}>
       <Route path='/home' component={Home} />
-      <Route path='/waffles' component={Waffles} />
       <IndexRoute component={Home} />
       </Route>
   </Router>

@@ -3,11 +3,13 @@ html body {
 }
 
 #OutsideWrapper{
-  position: relative;
-  min-height:100%;
+   position: relative;
+   min-height:100%;
 }
+
 #InsideWrapper{
-  padding-bottom: 50px;
+  padding-bottom: 150px;
+  display: flex;
 }
 
 .box{
@@ -21,22 +23,147 @@ html body {
 }
 
 .header{
-  height:100;
-  background-color: #DDD;
-  position: fixed;
+  height: 120;
+  background-color: #FFF;
+  position: absolute;
+  font-family: 'Open Sans', sans-serif;
+  color:#aaa;
+  font-size: 18;
 }
 
 .footer{
-  height:50;
-  background-color: #DDD;
-  position: absolute;
+  height:400px;
+  background-color: #F1F1F1;
+  position: fixed;
   bottom: 0;
+  box-shadow: 0 -4px 4px rgba(0,0,0,.12);
+  transform: translateY(280px);
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
 }
+
+.footerControls{
+  height:120px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+.footerExpanded{
+  transform: translateY(0px);
+}
+
+.addTrack{
+  height:280px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+.addTrackButton{
+  font-size:32;
+  color:#777;
+  opacity:0.7;
+  cursor:pointer;
+}
+.addTrackButton:hover{
+  color: #33ACE5;
+  opacity: 1;
+}
+
 
 .contentPage{
-  padding-top:100px;
+  padding-top:120px;
+  margin-bottom: 60px;
 }
 
+.channelPicBox{
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0,0,0,.12);
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.channelPicBox:hover{
+  box-shadow: 0 8px 8px rgba(0,0,0,.20);
+  transform: translateY(-3px);
+}
+
+.channelPicInfo{
+    position:absolute;
+    height:135;
+    width:200;
+    background-color:#33ACE5;
+    color:#FFF;
+    opacity:0;
+    transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.channelPicInfo:hover{
+  opacity: 0.9;
+}
+
+.controls{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+}
+
+.playPauseButton{
+  opacity: 0.7;
+  font-size: 32;
+  cursor: pointer;
+}
+
+.playPauseButton:hover{
+  color: #33ACE5;
+  opacity: 1;
+}
+
+.leftColTitles{
+  margin-top: 9px;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: right;
+  border-top: 1px solid #DDD;
+  color:#777;
+}
+
+.footerSave{
+  text-align: center;
+  font-size: 18;
+  color: #aaa;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.addTrackInput{
+margin: 5;
+
+display: inline-block;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+padding: 10px 20px;
+border: 1px solid #b7b7b7;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+
+font-family: 'Open Sans', sans-serif;
+
+
+color: rgba(0,142,198,1);
+-o-text-overflow: clip;
+text-overflow: clip;
+background: rgba(252,252,252,1);
+
+-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+-moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+-o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
 
 
 /* CSS React Transitions */
