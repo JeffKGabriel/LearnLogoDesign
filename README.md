@@ -22,3 +22,6 @@ Express & Express.Router :8888 for REST
 ~~ optional graphql server ~~ w/ apollo
 
 app/config/constants.js has optional firebase user fields
+
+**Testing**
+- Optional Mocha & Chai test server 
