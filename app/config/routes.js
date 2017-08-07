@@ -6,7 +6,6 @@ const appHistory = useRouterHistory(createHashHistory)()
 
 import Main from '../components/Main.js'
 import Home from '../components/Home.js'
-import Waffles from '../components/Waffles.js'
 
 
 // onUpdate={() => window.scrollTo(0, 0)}

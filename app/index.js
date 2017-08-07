@@ -10,7 +10,6 @@ import { syncHistoryWithStore, routerReducer, routerMiddleware } from 'react-rou
 
 import routes from './config/routes.js'
 
-import counter from './reducers/count.js'
 import playlists from './reducers/playlists.js'
 import auth from './reducers/auth.js'
 
@@ -24,7 +23,6 @@ const store = createStore(
   combineReducers({
     //reducer,
     auth,
-    counter,
     playlists,
     routing: routerReducer
   }),
