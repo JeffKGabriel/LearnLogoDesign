@@ -6,16 +6,10 @@ import { Provider, connect } from 'react-redux'
 import { Router, Route, hashHistory, IndexRoute, browserHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer, routerMiddleware } from 'react-router-redux'
 
-
-
 import routes from './config/routes.js'
 
 import playlists from './reducers/playlists.js'
 import auth from './reducers/auth.js'
-
-
-
-
 
 
 // Store

@@ -3,9 +3,12 @@ var path = require('path');
 
 var site = express();
 
+var server = require('http').Server(site);
+
+
 site.use('/', express.static(path.resolve(__dirname, 'dist')));
 
-site.listen(80, function () {
+server.listen(80, function () {
   console.log('site served on port :80');
 })
 
@@ -19,6 +22,63 @@ api.listen(8888);
 console.log("api started on port :8888");
 
 module.exports = api;
+
+
+// socketIO active users
+
+
+
+var io = require('socket.io')(server);
+
+
+
+
+
+var numClients = 0;
+var maxUsers = 0;
+
+console.log("uhh",io.sockets.clients().length)
+
+
+io.on('connection', function(socket) {
+    numClients++;
+
+
+    console.log('Connected clients:', numClients);
+
+
+    if(numClients > maxUsers){
+       maxUsers = numClients;
+       console.log("max users today = ", maxUsers);
+    }
+
+    io.emit('stats', { numClients: numClients, maxUsers:maxUsers })
+
+
+
+    socket.on('disconnect', function() {
+        numClients--;
+        io.emit('stats', { numClients: numClients });
+
+        console.log('Connected clients:', numClients);
+    });
+
+});
+
+
+setInterval(function() {
+    console.log(Date.now());
+    console.log("numClients",numClients)
+    console.log("maxUsers",maxUsers);
+}, 5 * 1000);
+
+
+
+
+
+
+
+
 
 
 //ssl

@@ -5,6 +5,8 @@ import firebase from 'firebase'
 import {ref, firebaseAuth} from '../config/constants'
 import fireAuth from '../helpers/fireAuth'
 
+import RightCol from './RightCol'
+
 
 class Home extends Component{
 
@@ -15,7 +17,7 @@ class Home extends Component{
 
 
   componentWillMount(){
-
+    console.log("home");
   }
 
 
@@ -30,21 +32,91 @@ class Home extends Component{
 
   render(){
 
+    console.log("activeTab",this.props.activeTab);
+
 
     //Container for the channel List
     return(
-      <div>
 
-        hi
+        <div className="col-xs-12 home nopadding">
 
-      </div>
+          <div className="col-xs-12 mainBoxes">
+
+
+            <div className="col-xs-2">
+              <div className="world box">
+              </div>
+
+            </div>
+
+            <div className="col-xs-5">
+              <div className="world box" ></div>
+            </div>
+
+            <div className="col-xs-2">
+                <div className="world box" ></div>
+            </div>
+
+            <div className="col-xs-3">
+                <div className="world box" > </div>
+            </div>
+
+            <div className="col-xs-4">
+                <div className="world box" > </div>
+            </div>
+
+            <div className="col-xs-4 ">
+                <div className="world box" > </div>
+            </div>
+
+            <div className="col-xs-4 ">
+                <div className="world box" > </div>
+            </div>
+
+
+            <div className="col-xs-3">
+              <div className="world box" > </div>
+            </div>
+
+            <div className="col-xs-2">
+              <div className="world box" > </div>
+            </div>
+
+            <div className="col-xs-5">
+                <div className="world box" > </div>
+            </div>
+
+            <div className="col-xs-2">
+                <div className="world box" > </div>
+            </div>
+
+
+            <div className="col-xs-4">
+                <div className="world box" > </div>
+            </div>
+
+            <div className="col-xs-4 ">
+                <div className="world box" > </div>
+            </div>
+
+            <div className="col-xs-4 ">
+                <div className="world box" > </div>
+            </div>
+
+
+
+          </div>
+
+            <div className="col-xs-10" style={{height:20}} ></div>
+
+
+        </div>
+
     )
   }
 
 
 }
-
-
 
 
 

@@ -5,17 +5,22 @@ import { createHashHistory } from 'history'
 const appHistory = useRouterHistory(createHashHistory)()
 
 import Main from '../components/Main.js'
-import Home from '../components/Home.js'
+import Maps from '../components/Center/Maps.js'
+import Notifications from '../components/Center/Notifications'
+import Bookmarks from '../components/Center/Bookmarks'
+import Messages from '../components/Center/Messages'
 
 
 // onUpdate={() => window.scrollTo(0, 0)}
 
 const routes = (
-
   <Router history={appHistory}>
     <Route path='/' component={Main}>
-      <Route path='/home' component={Home} />
-      <IndexRoute component={Home} />
+      <Route path='/maps' component={Maps} />
+      <Route path='/bookmarks' component={Bookmarks} />
+      <Route path='/messages' component={Messages} />
+      <Route path='/notifications' component={Notifications} />
+      <IndexRoute component={Maps} />
       </Route>
   </Router>
 )
