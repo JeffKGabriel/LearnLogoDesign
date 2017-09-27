@@ -1,6 +1,7 @@
 language: node_js
+
 node_js:
  - "node"
 
- notifications:
-    slack: jgab:IHkKti5O4GV5vvH0UhBxajaQ
+notifications:
+  slack: jgab:IHkKti5O4GV5vvH0UhBxajaQ

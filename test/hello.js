@@ -1,2 +1,2 @@
 
-console.log('HelloTest')
+console.log('HelloTests')
