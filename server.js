@@ -1,25 +1,24 @@
-var express = require('express');
-var path = require('path');
+const express = require('express')
+const path = require('path')
 
-var site = express();
+const site = express()
+const server = require('http').Server(site)
 
-var server = require('http').Server(site);
 
+site.use('/', express.static(path.resolve(__dirname, 'dist')))
 
-site.use('/', express.static(path.resolve(__dirname, 'dist')));
-
-server.listen(80, function () {
-  console.log('site served on port :80');
+server.listen(80, () => {
+  console.log('site served on port :80')
 })
 
 //serve api
 
-var api = require('./api/index');
-var router = require('./api/router');
+let api = require('./api/index');
+let router = require('./api/router');
 
 api.use('/api', router);
 api.listen(8888);
-console.log("api started on port :8888");
+console.log("api started on port :8888")
 
 module.exports = api;
 
@@ -27,58 +26,44 @@ module.exports = api;
 // socketIO active users
 
 
+const io = require('socket.io')(server);
 
-var io = require('socket.io')(server);
-
-
-
-
-
-var numClients = 0;
-var maxUsers = 0;
+let numClients = 0
+let maxUsers = 0
 
 console.log("uhh",io.sockets.clients().length)
 
 
-io.on('connection', function(socket) {
-    numClients++;
+io.on('connection', (socket) => {
+  numClients++
 
 
-    console.log('Connected clients:', numClients);
+  console.log('Connected clients:', numClients)
 
 
-    if(numClients > maxUsers){
-       maxUsers = numClients;
-       console.log("max users today = ", maxUsers);
-    }
+  if(numClients > maxUsers){
+    maxUsers = numClients;
+    console.log("max users today = ", maxUsers)
+  }
 
-    io.emit('stats', { numClients: numClients, maxUsers:maxUsers })
+  io.emit('stats', { numClients, maxUsers })
 
 
+  socket.on('disconnect', () => {
+    numClients--;
+    io.emit('stats', { numClients })
 
-    socket.on('disconnect', function() {
-        numClients--;
-        io.emit('stats', { numClients: numClients });
-
-        console.log('Connected clients:', numClients);
-    });
+    console.log('Connected clients:', numClients)
+  });
 
 });
 
 
-setInterval(function() {
-    console.log(Date.now());
-    console.log("numClients",numClients)
-    console.log("maxUsers",maxUsers);
+setInterval(() => {
+  console.log(Date.now());
+  console.log("numClients",numClients)
+  console.log("maxUsers",maxUsers);
 }, 5 * 1000);
-
-
-
-
-
-
-
-
 
 
 //ssl
@@ -95,7 +80,6 @@ var options = {
 
 var server = https.createServer(options, site);
 */
-
 
 
 // this http redirect works
@@ -116,9 +100,6 @@ redirectApp.use(function requireHTTPS(req, res, next) {
 redirectServer.listen(80);
 
 */
-
-
-
 
 
 // serve site

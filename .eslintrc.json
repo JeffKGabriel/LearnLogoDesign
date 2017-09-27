@@ -24,6 +24,14 @@
         "arrow-body-style": 0,
         "prefer-template":0,
         "no-trailing-spaces":0,
-        "no-console" :0
+        "no-console" :0,
+        "no-var" :1,
+        "linebreak-style":0,
+        "prefer-arrow-callback":1,
+        "arrow-spacing":0,
+        "prefer-const":0,
+        "vars-on-top":1,
+        "no-plusplus":0,
+        "import/newline-after-import":1
     }
 }
