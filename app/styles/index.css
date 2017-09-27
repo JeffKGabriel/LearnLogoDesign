@@ -17,7 +17,7 @@ html body {
 }
 
 .box:hover{
-  box-shadow: 0 0px 8px rgba(0,0,0,.16);
+  box-shadow: 0 0 8px rgba(0,0,0,.16);
   transform: translateY(-1px);
 }
 
@@ -167,7 +167,6 @@ html body {
 }
 
 .world{
-  background-color: blue;
   height:300px;
   border-radius: 6px;
   background-color: #E9EBF6;
@@ -175,7 +174,6 @@ html body {
 }
 
 .messages{
-  background-color: blue;
   height:300px;
   border-radius: 6px;
   background-color: #EBF7F7;
