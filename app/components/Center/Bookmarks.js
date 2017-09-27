@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-
-
 import CenterBox from './CenterBox'
 
 
@@ -19,7 +17,6 @@ class Bookmarks extends Component{
   componentWillReceiveProps(nextProps){
     //console.log("nextProps",nextProps);
   }
-
 
 
   render(){
@@ -60,7 +57,6 @@ class Bookmarks extends Component{
 
 
 }
-
 
 
 export default connect()(Bookmarks)
